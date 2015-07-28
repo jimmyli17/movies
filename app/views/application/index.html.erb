@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset2">
+        <h1>Movies:</h1>
+        <ul>
+          <% @movies.each do |movie|%>
+          <li>
+            <%=movie.name%> - 
+            <a href="/movies/<%=movie.id%>">show</a> |
+            <a href="/movies/<%=movie.id%>/edit">edit</a> |
+            <a href="/movies/<%=movie.id%>/delete">delete</a>
+          </li>
+<% end %>
+        </ul>
+        <div class="container">
+          <div class="row" align="center">
+            <a href="/movies/new">Add another movie</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
